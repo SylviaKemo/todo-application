@@ -36,7 +36,7 @@ const TaskList = () => {
       <div className="absolute bottom-2 flex items-end w-full">
         <input
           type="text"
-          placeholder="add task"
+          placeholder=""
           ref={inputRef}
           className="px-3 py-2 w-[85%] bg-transparent border-b-[1px] border-[#FAA885]"
         />
