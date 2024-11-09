@@ -11,7 +11,7 @@ const signupUser = async (req, res) => {
   const { email, password, name, confirmPassword } = req.body;
 
   try {
-    // signup method we created earlier
+    // signup method I created earlier
     const user = await User.signup(email, password, name, confirmPassword);
     // create a token
     const token = createToken(user._id);
@@ -33,7 +33,9 @@ const loginUser = async (req, res) => {
     const token = createToken(user._id);
 
     // Send the response with user details and token
-    res.status(200).json({ email: user.email, token });
+    res
+      .status(200)
+      .json({ email: user.email, name: user.name, _id: user._id, token });
   } catch (error) {
     res.status(400).json({ error: error.message });
   }

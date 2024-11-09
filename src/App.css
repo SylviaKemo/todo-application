@@ -3,7 +3,6 @@
 body {
   font-family: "Plus Jakarta Sans", serif;
   background-color: #e6e6e6;
-  /* font-family: "Nunito", serif; */
 }
 @tailwind components;
 input,
@@ -11,7 +10,12 @@ button {
   font-family: inherit;
 }
 
+.radio {
+  accent-color: #cf7751;
+}
+
 @tailwind utilities;
+
 
 /* 
 body:E6E6E6
