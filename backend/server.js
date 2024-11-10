@@ -3,6 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 // const taskRoutes = require("./routes/taskRoutes");
 const userRoute = require("./routes/userRoute");
+const dailyReflectionRoutes = require("./routes/dailyReflectionRoutes");
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.use((req, res, next) => {
 
 // app.use("/api/tasks", taskRoutes);
 app.use("/api/user", userRoute);
+app.use("/api/dailyReflections", dailyReflectionRoutes);
 
 mongoose
   .connect(process.env.MONGO_URL)

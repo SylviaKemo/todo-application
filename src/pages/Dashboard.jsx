@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import TaskList from "../components/TaskList";
+// import TaskList from "../components/TaskList";
 import { AiOutlineLogout } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 
-// import { useNavigate } from "react-router-dom";
+import DailyReflectionsForm from "../components/DailyReflectionsForm";
 
 const Dashboard = () => {
   const [userName, setUserName] = useState("");
@@ -32,7 +32,6 @@ const Dashboard = () => {
     navigate("/login");
   };
 
-
   return (
     <div className="h-screen relative">
       <div className="bg-[#CF7751]">
@@ -51,12 +50,13 @@ const Dashboard = () => {
             Good Afternoon
           </h3>
         </div>
-        <div className="flex justify-center pt-14">
+        {/* <div className="flex justify-center pt-14">
           <img src="/assets/clock.png" alt="clock" />
-        </div>
+        </div> */}
       </div>
       <div>
-        <TaskList userId={userId} />
+        {/* <TaskList userId={userId} /> */}
+        <DailyReflectionsForm />
       </div>
     </div>
   );
